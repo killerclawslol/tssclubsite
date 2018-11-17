@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{%block content%}
+{% if name %}
+    {% for j in name %}
+        <h1>{{j.schoolname}} 's clubsite</h1>
+    {% endfor %}
+    {% else %}
+        <title>No Name Set, Try Setting A Name</title>
+        <h1>No Name Set, Try Setting A Name /admin</h1>
+{% endif %}
+{% endblock content %}
