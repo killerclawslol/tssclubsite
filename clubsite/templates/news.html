@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{%block content%}
+    {% for p in post %}
+        <div class="row">
+          <div class="leftcolumn">
+            <div class="card">
+                <h2>{{p.title}}</h2>
+              <h10>{{p.date_posted}}</h10>
+              <p>{{ p.content}}</p>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+{% endblock content %}
