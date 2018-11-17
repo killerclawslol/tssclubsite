@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'sortedm2m',
-
+     #Clubsite apps
+    'clubsite.apps.ClubsiteConfig',
     'club_management.apps.ClubManagementConfig',
 ]
 
