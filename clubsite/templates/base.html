@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'clubsite/main.css' %}">
+    {% if name %}
+            {% for j in name %}
+        <title>Clubsite - {{ j.schoolname}}</title>
+            {% endfor %}
+    {% else %}
+        <title>No Name Set, Try Setting A Name</title>
+    {% endif %}
+</head>
+<body>
+    <div id="navbar">
+        <a href="{% url 'clubsite-home' %}">Home</a>
+     <a href="{% url 'clubsite-news' %}">News</a>
+     <a href="#jonathanisaweeb">Clubs</a>
+        <b>Login</b>
+        <b>Register</b>
+    </div>
+
+    {% block content %}{% endblock %}
+
+
+    <!-Scripts->
+    <script src="{% static "clubsite/navbar.js" %}"></script>
+
+
+
+</body>
+</html>
